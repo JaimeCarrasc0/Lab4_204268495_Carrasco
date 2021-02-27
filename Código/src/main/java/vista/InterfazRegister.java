@@ -1,22 +1,22 @@
-package Lab4_204268495_Carrasco;
+package vista;
 
 import javax.swing.*;
 import java.awt.event.*;
 
 /**
- * Clase interfaz login
+ * clase interfaz register
  */
-public class InterfazLogin extends JFrame implements ActionListener{
+public class InterfazRegister extends JFrame implements ActionListener {
     private JLabel titulo, texto1, texto2;
-    private JButton boton1, boton2, boton3;
+    private JButton boton1,boton2,boton3;
     private JTextField usuario;
     private JPasswordField pass;
     private InterfazMenu menu;
 
-    public InterfazLogin(){
+    public InterfazRegister(){
         setLayout(null);
-        titulo=new JLabel("Iniciar Sesión");
-        titulo.setBounds(215,30,120,30);
+        titulo= new JLabel("Registro nuevo usuario");
+        titulo.setBounds(195,30,180,30);
         add(titulo);
 
         texto1=new JLabel("Usuario");
@@ -35,7 +35,7 @@ public class InterfazLogin extends JFrame implements ActionListener{
         pass.setBounds(10,330,150,25);
         add(pass);
 
-        boton1=new JButton("Ingresar");
+        boton1=new JButton("Registrar");
         boton1.setBounds(10,450,150,30);
         add(boton1);
         boton1.addActionListener(this);
@@ -54,24 +54,27 @@ public class InterfazLogin extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        menu=new InterfazMenu();
+        menu.setBounds(0,0,550,550);
+        menu.setResizable(false);
+        menu.setLocationRelativeTo(null);
 
         if (e.getSource()==boton1){
+            //realizar registro con el código anterior
             String user=usuario.getText();
             String password=pass.getText();
             setTitle("Sesión iniciada como "+user);
+            menu.setVisible(true);
+            this.setVisible(false);
             //System.out.println(password);
         }
         else if (e.getSource()==boton2){
-            menu=new InterfazMenu();
-            menu.setBounds(0,0,550,550);
-            menu.setResizable(false);
-            menu.setLocationRelativeTo(null);
+
             menu.setVisible(true);
             this.setVisible(false);
         }
         else if (e.getSource()==boton3){
             System.exit(0);
         }
-
     }
 }

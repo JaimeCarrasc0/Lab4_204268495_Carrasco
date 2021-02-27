@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: Jaime Carrasco
+Main-Class: Menu
+X-COMMENT: Implementacion de una simulacion de Stack Overflow para el curso paradigmas de programación 2-2020

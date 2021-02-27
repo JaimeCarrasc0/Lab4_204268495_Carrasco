@@ -1,4 +1,6 @@
-package Lab4_204268495_Carrasco;
+package vista;
+
+import modelo.Menu;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -63,6 +65,7 @@ public class InterfazMenu extends JFrame implements ActionListener{
     }
 
     public static void main(String[] args) {
+        //Menu mainMenu= new Menu();
         InterfazMenu menu= new InterfazMenu();
         menu.setBounds(0,0,550,550);
         menu.setVisible(true);
