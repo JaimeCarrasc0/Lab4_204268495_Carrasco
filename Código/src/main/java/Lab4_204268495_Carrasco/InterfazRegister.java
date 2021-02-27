@@ -16,7 +16,7 @@ public class InterfazRegister extends JFrame implements ActionListener {
     public InterfazRegister(){
         setLayout(null);
         titulo= new JLabel("Registro nuevo usuario");
-        titulo.setBounds(215,30,120,30);
+        titulo.setBounds(195,30,180,30);
         add(titulo);
 
         texto1=new JLabel("Usuario");
@@ -60,7 +60,7 @@ public class InterfazRegister extends JFrame implements ActionListener {
         menu.setLocationRelativeTo(null);
 
         if (e.getSource()==boton1){
-            //
+            //realizar registro con el código anterior
             String user=usuario.getText();
             String password=pass.getText();
             setTitle("Sesión iniciada como "+user);
