@@ -1,4 +1,6 @@
 Lab4_204268495_Carrasco/InterfazLogin.java
  Lab4_204268495_Carrasco.InterfazLogin
+Lab4_204268495_Carrasco/InterfazRegister.java
+ Lab4_204268495_Carrasco.InterfazRegister
 Lab4_204268495_Carrasco/InterfazMenu.java
  Lab4_204268495_Carrasco.InterfazMenu

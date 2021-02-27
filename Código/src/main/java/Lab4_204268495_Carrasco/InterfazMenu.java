@@ -3,10 +3,14 @@ package Lab4_204268495_Carrasco;
 import javax.swing.*;
 import java.awt.event.*;
 
+/**
+ * Clase interfaz menú
+ */
 public class InterfazMenu extends JFrame implements ActionListener{
     private JLabel etiqueta;
     private JButton boton1,boton2,boton3;
     private InterfazLogin login;
+    private InterfazRegister register;
 
     public InterfazMenu(){
         setLayout(null);
@@ -34,7 +38,7 @@ public class InterfazMenu extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e){
         if(e.getSource()==boton1){
             //System.out.println("Iniciar Sesión");
-            etiqueta.setText("Iniciar Sesión");
+            //etiqueta.setText("Iniciar Sesión");
             this.setVisible(false);
             login=new InterfazLogin();
             login.setBounds(0,0,550,550);
@@ -45,7 +49,13 @@ public class InterfazMenu extends JFrame implements ActionListener{
         }
         else if(e.getSource() == boton2){
             //System.out.println("Registrarse");
-            etiqueta.setText("Registrarse");
+            //etiqueta.setText("Registrarse");
+            this.setVisible(false);
+            register=new InterfazRegister();
+            register.setBounds(0,0,550,550);
+            register.setLocationRelativeTo(null);
+            register.setResizable(false);
+            register.setVisible(true);
             }
         else if(e.getSource() == boton3){
             System.exit(0);
