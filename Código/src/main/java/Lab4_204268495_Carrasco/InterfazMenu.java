@@ -6,6 +6,7 @@ import java.awt.event.*;
 public class InterfazMenu extends JFrame implements ActionListener{
     private JLabel etiqueta;
     private JButton boton1,boton2,boton3;
+    private InterfazLogin login;
 
     public InterfazMenu(){
         setLayout(null);
@@ -34,6 +35,13 @@ public class InterfazMenu extends JFrame implements ActionListener{
         if(e.getSource()==boton1){
             //System.out.println("Iniciar Sesión");
             etiqueta.setText("Iniciar Sesión");
+            this.setVisible(false);
+            login=new InterfazLogin();
+            login.setBounds(0,0,550,550);
+            login.setLocationRelativeTo(null);
+            login.setResizable(false);
+            login.setVisible(true);
+
         }
         else if(e.getSource() == boton2){
             //System.out.println("Registrarse");
