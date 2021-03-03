@@ -110,6 +110,7 @@ public class Menu{
         ArrayList<Usuario> activos= new ArrayList<>();
 
         Stack stack=new Stack(usuarios,preguntas,activos);
+        //Stack stack=new Stack();
         Scanner input= new Scanner(System.in);
         int opcion;
         //System.out.println("Bienvenido al sistema de preguntas y respuestas\n1)Iniciar Sesión\n2)Registrarse\n3)Salir");

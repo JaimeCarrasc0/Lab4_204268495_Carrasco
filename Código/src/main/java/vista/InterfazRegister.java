@@ -27,7 +27,7 @@ public class InterfazRegister extends JFrame implements ActionListener {
         usuario.setBounds(10,230,150,25);
         add(usuario);
 
-        texto2=new JLabel("Contraseña");
+        texto2=new JLabel("Contrase\u00f1a");
         texto2.setBounds(10,300,150,30);
         add(texto2);
 
@@ -63,7 +63,7 @@ public class InterfazRegister extends JFrame implements ActionListener {
             //realizar registro con el código anterior
             String user=usuario.getText();
             String password=pass.getText();
-            setTitle("Sesión iniciada como "+user);
+            setTitle("Sesi\u00f3n iniciada como "+user);
             menu.setVisible(true);
             this.setVisible(false);
             //System.out.println(password);

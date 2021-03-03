@@ -12,9 +12,9 @@ modelo/Usuario.java
  modelo.Usuario
 modelo/Menu.java
  modelo.Menu
-vista/InterfazMenu.java
- vista.InterfazMenu
 vista/InterfazRegister.java
  vista.InterfazRegister
+vista/InterfazMenu.java
+ vista.InterfazMenu
 vista/InterfazLogin.java
  vista.InterfazLogin

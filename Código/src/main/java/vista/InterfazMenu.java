@@ -1,9 +1,10 @@
 package vista;
 
-import modelo.Menu;
+import modelo.*;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 /**
  * Clase interfaz menú
@@ -17,7 +18,7 @@ public class InterfazMenu extends JFrame implements ActionListener{
     public InterfazMenu(){
         setLayout(null);
 
-        boton1= new JButton("Iniciar Sesión");
+        boton1= new JButton("Iniciar Sesi\u00f3n");
         boton1.setBounds(10,200,150,30);
         add(boton1);
         boton1.addActionListener(this);
@@ -63,9 +64,10 @@ public class InterfazMenu extends JFrame implements ActionListener{
             System.exit(0);
         }
     }
+    public static Stack stack= new Stack();
 
     public static void main(String[] args) {
-        //Menu mainMenu= new Menu();
+        //stack.imprimirPreguntas();
         InterfazMenu menu= new InterfazMenu();
         menu.setBounds(0,0,550,550);
         menu.setVisible(true);

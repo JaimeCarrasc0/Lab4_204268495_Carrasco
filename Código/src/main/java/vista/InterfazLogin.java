@@ -1,5 +1,7 @@
 package vista;
 
+import modelo.*;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -7,17 +9,21 @@ import java.awt.event.*;
  * Clase interfaz login
  */
 public class InterfazLogin extends JFrame implements ActionListener{
-    private JLabel titulo, texto1, texto2;
+    private JLabel titulo, texto1, texto2, titulo2;
     private JButton boton1, boton2, boton3;
     private JTextField usuario;
     private JPasswordField pass;
-    private InterfazMenu menu;
+    private InterfazMenu menu = new InterfazMenu();
 
     public InterfazLogin(){
         setLayout(null);
-        titulo=new JLabel("Iniciar Sesión");
+        titulo=new JLabel("Iniciar Sesi\u00f3n");
         titulo.setBounds(215,30,120,30);
         add(titulo);
+
+        titulo2=new JLabel("");
+        titulo2.setBounds(10,150,300,30);
+        add(titulo2);
 
         texto1=new JLabel("Usuario");
         texto1.setBounds(10,200,150,30);
@@ -27,7 +33,7 @@ public class InterfazLogin extends JFrame implements ActionListener{
         usuario.setBounds(10,230,150,25);
         add(usuario);
 
-        texto2=new JLabel("Contraseña");
+        texto2=new JLabel("Contrase\u00f1a");
         texto2.setBounds(10,300,150,30);
         add(texto2);
 
@@ -58,11 +64,18 @@ public class InterfazLogin extends JFrame implements ActionListener{
         if (e.getSource()==boton1){
             String user=usuario.getText();
             String password=pass.getText();
-            setTitle("Sesión iniciada como "+user);
+            if (menu.stack.login(user,password)){
+                //enviar a otra interfaz
+            }
+            else{
+                titulo2.setText("Usuario o contrase\u00f1a equivocada, reint\u00e9ntelo");
+            }
+
+
+            setTitle("Sesi\u00f3n iniciada como "+user);
             //System.out.println(password);
         }
         else if (e.getSource()==boton2){
-            menu=new InterfazMenu();
             menu.setBounds(0,0,550,550);
             menu.setResizable(false);
             menu.setLocationRelativeTo(null);
