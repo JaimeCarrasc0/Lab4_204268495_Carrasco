@@ -37,8 +37,8 @@ public class InterfazUsuario extends JFrame implements ActionListener {
         add(boton4);
         boton4.addActionListener(this);
 
-        boton5=new JButton("Volver");
-        boton5.setBounds(300,450,90,30);
+        boton5=new JButton("Cerrar Sesi\u00f3n");
+        boton5.setBounds(240,450,150,30);
         add(boton5);
         boton5.addActionListener(this);
 
@@ -53,6 +53,13 @@ public class InterfazUsuario extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==boton1){
             //interfaz de hacer preguntas
+            InterfazPregunta menuPregunta = new InterfazPregunta();
+            menuPregunta.setBounds(0,0,550,550);
+            menuPregunta.setResizable(false);
+            menuPregunta.setLocationRelativeTo(null);
+            menuPregunta.setVisible(true);
+
+            this.setVisible(false);
         }
         else if (e.getSource()==boton2){
             //interfaz de responder

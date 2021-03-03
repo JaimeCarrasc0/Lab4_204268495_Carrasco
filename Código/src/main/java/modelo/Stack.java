@@ -36,7 +36,8 @@ public class Stack {
         Usuario user1=new Usuario("Julián","Alonso",3);
         Usuario user2=new Usuario("Jaime","Alejandro",5);
         Usuario user3=new Usuario("31110t","mrRob0t",50);
-        Usuario user4=new Usuario("LazarB3am","Lannan",35);
+        //Usuario user4=new Usuario("LazarB3am","Lannan",35);
+        Usuario user4=new Usuario("","",35);
 
         Respuesta answer1=new Respuesta(0,user2,"Debes usar input");
         Respuesta answer2=new Respuesta(1,user3,"input");

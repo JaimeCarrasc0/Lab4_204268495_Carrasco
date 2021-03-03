@@ -2,21 +2,23 @@ modelo/Pregunta.java
  modelo.Pregunta
 modelo/Retenidos.java
  modelo.Retenidos
-modelo/Stack.java
- modelo.Stack
+modelo/Usuario.java
+ modelo.Usuario
+vista/InterfazRegister.java
+ vista.InterfazRegister
 modelo/Respuesta.java
  modelo.Respuesta
 modelo/Etiquetas.java
  modelo.Etiquetas
-modelo/Usuario.java
- modelo.Usuario
-modelo/Menu.java
- modelo.Menu
-vista/InterfazRegister.java
- vista.InterfazRegister
-vista/InterfazMenu.java
- vista.InterfazMenu
+modelo/Stack.java
+ modelo.Stack
+vista/InterfazPregunta.java
+ vista.InterfazPregunta
 vista/InterfazUsuario.java
  vista.InterfazUsuario
+vista/InterfazMenu.java
+ vista.InterfazMenu
+modelo/Menu.java
+ modelo.Menu
 vista/InterfazLogin.java
  vista.InterfazLogin
