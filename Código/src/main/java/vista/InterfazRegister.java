@@ -7,17 +7,21 @@ import java.awt.event.*;
  * clase interfaz register
  */
 public class InterfazRegister extends JFrame implements ActionListener {
-    private JLabel titulo, texto1, texto2;
+    private JLabel titulo, titulo2, texto1, texto2;
     private JButton boton1,boton2,boton3;
     private JTextField usuario;
     private JPasswordField pass;
-    private InterfazMenu menu;
+    private InterfazMenu menu=new InterfazMenu();
 
     public InterfazRegister(){
         setLayout(null);
         titulo= new JLabel("Registro nuevo usuario");
         titulo.setBounds(195,30,180,30);
         add(titulo);
+
+        titulo2=new JLabel("");
+        titulo2.setBounds(10,100,300,80);
+        add(titulo2);
 
         texto1=new JLabel("Usuario");
         texto1.setBounds(10,200,150,30);
@@ -54,7 +58,6 @@ public class InterfazRegister extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        menu=new InterfazMenu();
         menu.setBounds(0,0,550,550);
         menu.setResizable(false);
         menu.setLocationRelativeTo(null);
@@ -63,13 +66,18 @@ public class InterfazRegister extends JFrame implements ActionListener {
             //realizar registro con el código anterior
             String user=usuario.getText();
             String password=pass.getText();
-            setTitle("Sesi\u00f3n iniciada como "+user);
-            menu.setVisible(true);
-            this.setVisible(false);
+
+            if (menu.stack.register(user,password)){
+                menu.setVisible(true);
+                this.setVisible(false);
+            }
+            else{
+                titulo2.setText("<html><body> <p style=\"color:#FF0000\";>Nombre de usuario ocupado.</p><br>Intente iniciar sesi\u00f3n o intentelo con otro nombre</body></html>");
+
+            }
             //System.out.println(password);
         }
         else if (e.getSource()==boton2){
-
             menu.setVisible(true);
             this.setVisible(false);
         }

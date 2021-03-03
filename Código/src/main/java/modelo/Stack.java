@@ -197,9 +197,27 @@ public class Stack {
      * Añadir un usuario nuevo al stack
      * @param nuevoUsuario un usuario
      */
-    public void registrarUsuario(Usuario nuevoUsuario) {
+    private void registrarUsuario(Usuario nuevoUsuario) {
         this.usuarios.add(nuevoUsuario);
     }
+
+    /**
+     *
+     * @param user usuario
+     * @param pass contraseña
+     * @return true si se logra registrar al usuario, false si está registrado
+     */
+    public boolean register(String user, String pass){
+        if(existeUsuario(user)){
+            return false;
+        }
+        else{
+            Usuario nuevoUser=new Usuario(user,pass,0);
+            registrarUsuario(nuevoUser);
+            return true;
+        }
+    }
+
 
     /**
      * Login

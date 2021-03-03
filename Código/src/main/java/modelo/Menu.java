@@ -180,7 +180,8 @@ public class Menu{
 
                         usuario = new Usuario(user, clave, 0);
 
-                        stack.registrarUsuario(usuario);
+                        //stack.registrarUsuario(usuario);
+                        stack.register(user,clave);
 
                         System.out.println("Usuario creado con éxito");
 

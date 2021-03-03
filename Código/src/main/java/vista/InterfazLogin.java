@@ -22,7 +22,7 @@ public class InterfazLogin extends JFrame implements ActionListener{
         add(titulo);
 
         titulo2=new JLabel("");
-        titulo2.setBounds(10,150,300,30);
+        titulo2.setBounds(10,150,300,50);
         add(titulo2);
 
         texto1=new JLabel("Usuario");
@@ -74,7 +74,7 @@ public class InterfazLogin extends JFrame implements ActionListener{
                 //enviar a otra interfaz
             }
             else{
-                titulo2.setText("Usuario o contrase\u00f1a equivocada, reint\u00e9ntelo");
+                titulo2.setText("<html><body><p style=\"color:#FF0000\";>Usuario o contrase\u00f1a equivocada.</p><br>Reint\u00e9ntelo</body></html>");
             }
 
 

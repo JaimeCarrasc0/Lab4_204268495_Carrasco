@@ -1,13 +1,15 @@
 package vista;
 
 import javax.swing.*;
+import javax.swing.event.*;
 import java.awt.event.*;
 
-public class InterfazPregunta extends JFrame implements ActionListener {
+public class InterfazPregunta extends JFrame implements ActionListener, ChangeListener {
     private JLabel titulo, texto1, texto2, texto3, texto4;
     private JTextField tituloPregunta;
     private JTextArea pregunta;
     private JButton boton1, boton2, boton3;
+    private JCheckBox check1;
     public InterfazMenu menu= new InterfazMenu();
     public InterfazUsuario userMenu= new InterfazUsuario();
 
@@ -66,5 +68,10 @@ public class InterfazPregunta extends JFrame implements ActionListener {
             menu.setVisible(true);
             this.setVisible(false);
         }
+    }
+
+    @Override
+    public void stateChanged(ChangeEvent e) {
+
     }
 }
