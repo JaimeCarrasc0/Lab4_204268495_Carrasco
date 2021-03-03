@@ -16,5 +16,7 @@ vista/InterfazRegister.java
  vista.InterfazRegister
 vista/InterfazMenu.java
  vista.InterfazMenu
+vista/InterfazUsuario.java
+ vista.InterfazUsuario
 vista/InterfazLogin.java
  vista.InterfazLogin

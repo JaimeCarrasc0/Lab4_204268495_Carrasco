@@ -13,7 +13,7 @@ public class InterfazLogin extends JFrame implements ActionListener{
     private JButton boton1, boton2, boton3;
     private JTextField usuario;
     private JPasswordField pass;
-    private InterfazMenu menu = new InterfazMenu();
+    public static InterfazMenu menu = new InterfazMenu();
 
     public InterfazLogin(){
         setLayout(null);
@@ -65,6 +65,12 @@ public class InterfazLogin extends JFrame implements ActionListener{
             String user=usuario.getText();
             String password=pass.getText();
             if (menu.stack.login(user,password)){
+                InterfazUsuario menuUser = new InterfazUsuario();
+                menuUser.setBounds(0,0,550,550);
+                menuUser.setVisible(true);
+                menuUser.setResizable(false);
+                menuUser.setLocationRelativeTo(null);
+                this.setVisible(false);
                 //enviar a otra interfaz
             }
             else{
