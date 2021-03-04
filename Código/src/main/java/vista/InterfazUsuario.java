@@ -54,7 +54,7 @@ public class InterfazUsuario extends JFrame implements ActionListener {
         if (e.getSource()==boton1){
             //interfaz de hacer preguntas
             InterfazPregunta menuPregunta = new InterfazPregunta();
-            menuPregunta.setBounds(0,0,550,550);
+            menuPregunta.setBounds(0,0,600,550);
             menuPregunta.setResizable(false);
             menuPregunta.setLocationRelativeTo(null);
             menuPregunta.setVisible(true);

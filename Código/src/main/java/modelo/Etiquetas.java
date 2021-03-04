@@ -1,6 +1,8 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Esta clase define a las etiqeutas para las preguntas
@@ -9,6 +11,7 @@ import java.util.ArrayList;
 public class Etiquetas {
     private ArrayList<String> tags;
     private ArrayList<String> descripcion;
+    private List<String> tagsAlt;
 
     /**
      * consturctor de la clase etiquetas
@@ -27,7 +30,20 @@ public class Etiquetas {
         this.tags=new ArrayList<>();
         this.descripcion=new ArrayList<>();
     }
-
+    public Etiquetas(String tags){
+        this.tags=new ArrayList<>();
+        this.descripcion=new ArrayList<>();
+        int i;
+        String[] aux = tags.split(" ");
+        List<String> al= new ArrayList<String>();
+        al=Arrays.asList(aux);
+        for(String txt:al){
+            System.out.println(txt);
+            this.tags.add(txt);
+            this.descripcion.add("");
+        }
+        imprimirTags(0);
+    }
     /**
      * Getter de etiquetas
      * @return etiquetas en arreglo
@@ -62,6 +78,13 @@ public class Etiquetas {
         System.out.println("Etiquetas:\n");
         for(i=0;i<tags.size();i++){
             System.out.println("("+(i+1)+")"+tags.get(i)+": "+descripcion.get(i));
+        }
+    }
+    public void imprimirTags(int a){
+        int i;
+        System.out.println("Etiquetas:\n");
+        for(i=0;i<tags.size();i++){
+            System.out.println("("+(i+1)+")"+tags.get(i));
         }
     }
 }
