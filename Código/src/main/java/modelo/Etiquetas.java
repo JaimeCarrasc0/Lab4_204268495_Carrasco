@@ -38,11 +38,11 @@ public class Etiquetas {
         List<String> al= new ArrayList<String>();
         al=Arrays.asList(aux);
         for(String txt:al){
-            System.out.println(txt);
+            //System.out.println(txt);
             this.tags.add(txt);
             this.descripcion.add("");
         }
-        imprimirTags(0);
+        //imprimirTags(0);
     }
     /**
      * Getter de etiquetas
@@ -86,5 +86,9 @@ public class Etiquetas {
         for(i=0;i<tags.size();i++){
             System.out.println("("+(i+1)+")"+tags.get(i));
         }
+    }
+    public String tagToString(){
+        String aux= String.join(";",tags);
+        return aux;
     }
 }

@@ -18,6 +18,7 @@ public class InterfazPregunta extends JFrame implements ActionListener, ChangeLi
 
     public static InterfazMenu menu= new InterfazMenu();
     public InterfazUsuario userMenu= new InterfazUsuario();
+    private InterfazVerPreguntas preg;
 
     public InterfazPregunta(){
         setLayout(null);
@@ -88,15 +89,17 @@ public class InterfazPregunta extends JFrame implements ActionListener, ChangeLi
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        userMenu.setBounds(0,0,550,550);
+        userMenu.setResizable(false);
+        userMenu.setLocationRelativeTo(null);
         if (e.getSource()==boton1){
             Etiquetas tag = new Etiquetas(etiquetas.getText());
-            menu.stack.ask(titulo.getText(),pregunta.getText(),tag);
+            menu.stack.ask(tituloPregunta.getText(),pregunta.getText(),tag);
+            userMenu.setVisible(true);
+            this.setVisible(false);
 
         }
         else if (e.getSource()==boton2){
-            userMenu.setBounds(0,0,550,550);
-            userMenu.setResizable(false);
-            userMenu.setLocationRelativeTo(null);
             userMenu.setVisible(true);
             this.setVisible(false);
         }

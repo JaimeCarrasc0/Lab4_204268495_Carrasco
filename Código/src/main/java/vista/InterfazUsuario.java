@@ -9,6 +9,7 @@ public class InterfazUsuario extends JFrame implements ActionListener {
     private JLabel titulo;
     private JButton boton1, boton2, boton3, boton4, boton5, boton6;
     private InterfazMenu menu = new InterfazMenu();
+    private InterfazVerPreguntas preg;
 
     public InterfazUsuario(){
         setLayout(null);
@@ -63,6 +64,12 @@ public class InterfazUsuario extends JFrame implements ActionListener {
         }
         else if (e.getSource()==boton2){
             //interfaz de responder
+            preg=new InterfazVerPreguntas();
+            preg.setBounds(0,0,800,550);
+            preg.setResizable(false);
+            preg.setLocationRelativeTo(null);
+            preg.setVisible(true);
+            this.setVisible(false);
         }
         else if (e.getSource()==boton3){
             //interfaz de dar recompensa
