@@ -18,7 +18,6 @@ public class InterfazPregunta extends JFrame implements ActionListener, ChangeLi
 
     public static InterfazMenu menu= new InterfazMenu();
     public InterfazUsuario userMenu= new InterfazUsuario();
-    private InterfazVerPreguntas preg;
 
     public InterfazPregunta(){
         setLayout(null);

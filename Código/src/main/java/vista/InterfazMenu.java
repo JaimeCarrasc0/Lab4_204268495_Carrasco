@@ -11,27 +11,33 @@ import java.util.ArrayList;
  */
 public class InterfazMenu extends JFrame implements ActionListener{
     private JLabel etiqueta;
-    private JButton boton1,boton2,boton3;
+    private JButton boton1,boton2,boton3,boton4;
     private InterfazLogin login;
     private InterfazRegister register;
+    private InterfazVerPreguntas preg;
 
     public InterfazMenu(){
         setLayout(null);
 
         boton1= new JButton("Iniciar Sesi\u00f3n");
-        boton1.setBounds(10,200,150,30);
+        boton1.setBounds(10,200,200,30);
         add(boton1);
         boton1.addActionListener(this);
 
         boton2= new JButton("Registrarse");
-        boton2.setBounds(10,250,150,30);
+        boton2.setBounds(10,250,200,30);
         add(boton2);
         boton2.addActionListener(this);
 
-        boton3 =new JButton("Salir");
-        boton3.setBounds(10,300,150,30);
+        boton3 =new JButton("Ver preguntas");
+        boton3.setBounds(10,350,200,30);
         add(boton3);
         boton3.addActionListener(this);
+
+        boton4 =new JButton("Salir");
+        boton4.setBounds(10,350,200,30);
+        add(boton4);
+        boton4.addActionListener(this);
 
         etiqueta = new JLabel("Simulador Stack Overflow");
         etiqueta.setBounds(10, 10, 200, 300);
@@ -60,7 +66,17 @@ public class InterfazMenu extends JFrame implements ActionListener{
             register.setResizable(false);
             register.setVisible(true);
             }
-        else if(e.getSource() == boton3){
+
+        else if(e.getSource() == boton3) {
+            preg=new InterfazVerPreguntas();
+            preg.setBounds(0,0,800,550);
+            preg.setResizable(false);
+            preg.setLocationRelativeTo(null);
+            preg.setVisible(true);
+            this.setVisible(false);
+        }
+
+        else if(e.getSource() == boton4){
             System.exit(0);
         }
     }
