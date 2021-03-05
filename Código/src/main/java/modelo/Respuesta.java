@@ -60,6 +60,14 @@ public class Respuesta {
     }
 
     /**
+     * getter del contenido de la respuesta
+     * @return el contenido de la respyesta
+     */
+    public String getRespuesta() {
+        return respuesta;
+    }
+
+    /**
      * imprime el contenido de la respuesta
      */
     public void imprimirRespuestas(){

@@ -5,6 +5,7 @@ import java.awt.event.*;
 
 /**
  * clase interfaz register
+ * @author Jaime Carrasco
  */
 public class InterfazRegister extends JFrame implements ActionListener {
     private JLabel titulo, titulo2, texto1, texto2;
@@ -13,6 +14,9 @@ public class InterfazRegister extends JFrame implements ActionListener {
     private JPasswordField pass;
     private InterfazMenu menu=new InterfazMenu();
 
+    /**
+     * constructor de la clase
+     */
     public InterfazRegister(){
         setLayout(null);
         titulo= new JLabel("Registro nuevo usuario");
@@ -56,6 +60,10 @@ public class InterfazRegister extends JFrame implements ActionListener {
 
     }
 
+    /**
+     * Funcionalidad para traducir los eventos de botones
+     * @param e entrada evento
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         menu.setBounds(0,0,550,550);

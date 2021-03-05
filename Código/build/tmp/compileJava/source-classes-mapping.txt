@@ -2,28 +2,36 @@ modelo/Pregunta.java
  modelo.Pregunta
 modelo/Retenidos.java
  modelo.Retenidos
+modelo/Usuario.java
+ modelo.Usuario
 modelo/Stack.java
  modelo.Stack
-vista/InterfazLogin.java
- vista.InterfazLogin
+modelo/Menu.java
+ modelo.Menu
 modelo/Respuesta.java
  modelo.Respuesta
 modelo/Etiquetas.java
  modelo.Etiquetas
-modelo/Usuario.java
- modelo.Usuario
-vista/InterfazRegister.java
- vista.InterfazRegister
+vista/InterfazAceptar.java
+ vista.InterfazAceptar
 vista/InterfazPregunta.java
  vista.InterfazPregunta
-modelo/Menu.java
- modelo.Menu
 vista/InterfazResponder.java
  vista.InterfazResponder
+vista/InterfazAceptarRespuesta.java
+ vista.InterfazAceptarRespuesta
 vista/InterfazUsuario.java
  vista.InterfazUsuario
+vista/InterfazVerRespuesta.java
+ vista.InterfazVerRespuesta
+ vista.InterfazVerRespuesta$1
 vista/InterfazMenu.java
  vista.InterfazMenu
+vista/InterfazRegister.java
+ vista.InterfazRegister
+vista/InterfazLogin.java
+ vista.InterfazLogin
 vista/InterfazVerPreguntas.java
  vista.InterfazVerPreguntas
  vista.InterfazVerPreguntas$1
+ vista.InterfazVerPreguntas$2

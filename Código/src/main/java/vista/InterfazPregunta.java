@@ -3,12 +3,14 @@ package vista;
 import modelo.Etiquetas;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
-import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class InterfazPregunta extends JFrame implements ActionListener, ChangeListener {
+/**
+ * Clase interfaz para añadir preguntas al stack
+ * @author Jaime Carrasco
+ */
+public class InterfazPregunta extends JFrame implements ActionListener {
     private JLabel titulo, texto1, texto2, texto3, texto4;
     private JTextField tituloPregunta, etiquetas;
     private JTextArea pregunta;
@@ -19,6 +21,9 @@ public class InterfazPregunta extends JFrame implements ActionListener, ChangeLi
     public static InterfazMenu menu= new InterfazMenu();
     public InterfazUsuario userMenu= new InterfazUsuario();
 
+    /**
+     * constructor de la clase
+     */
     public InterfazPregunta(){
         setLayout(null);
         titulo=new JLabel("Realizar Pregunta");
@@ -85,7 +90,10 @@ public class InterfazPregunta extends JFrame implements ActionListener, ChangeLi
         boton3.addActionListener(this);
 
     }
-
+    /**
+     * Funcionalidad para traducir los eventos de botones
+     * @param e entrada evento
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         userMenu.setBounds(0,0,550,550);
@@ -113,10 +121,5 @@ public class InterfazPregunta extends JFrame implements ActionListener, ChangeLi
         else if(e.getSource()==ayuda){
             texto4.setText("<html><body><p style=\"color:#6c6c6c\";>Separa las etiquetas <br> con espacios</html></body></p>");
         }
-    }
-
-    @Override
-    public void stateChanged(ChangeEvent e) {
-
     }
 }

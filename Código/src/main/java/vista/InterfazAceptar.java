@@ -5,40 +5,37 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * interfaz para responder preguntas
+ * Clase interfaz aceptar, clase dedicada a la ventana para aceptar respuestas
  * @author Jaime Carrasco
  */
-public class InterfazResponder extends JFrame implements ActionListener {
+public class InterfazAceptar extends JFrame implements ActionListener {
+
     public static InterfazMenu menu=new InterfazMenu();
     public InterfazUsuario userMenu= new InterfazUsuario();
-    public InterfazVerPreguntas pregMenu= new InterfazVerPreguntas(1);
+    public InterfazVerPreguntas pregMenu= new InterfazVerPreguntas(0);
     private JLabel titulo,texto1,texto2,texto3,texto4 ;
     private JButton boton1,boton2,boton3;
     private JTextArea respuesta;
     private JScrollPane scroll;
+    public InterfazAceptarRespuesta acpResp= new InterfazAceptarRespuesta();
 
     /**
-     * constructor de la clase
+     * constructor clase
      */
-    public InterfazResponder(){
+    public InterfazAceptar(){
         setLayout(null);
-        titulo=new JLabel("Responder Pregunta");
+        titulo=new JLabel("Aceptar Respuesta");
         titulo.setBounds(215,30,120,30);
         add(titulo);
 
-        texto2=new JLabel("Respuesta");
+        texto2=new JLabel("Respuestas");
         texto2.setBounds(10,150,120,30);
         add(texto2);
 
-        respuesta =new JTextArea();
-        scroll=new JScrollPane(respuesta);
-        scroll.setBounds(10,180,400,200);
-        add(scroll);
-
-        boton1=new JButton("Enviar respuesta");
-        boton1.setBounds(10,450,150,30);
-        add(boton1);
-        boton1.addActionListener(this);
+        /*acpResp.setBounds(0,0,800,550);
+        acpResp.setResizable(false);
+        acpResp.setLocationRelativeTo(null);
+        acpResp.setVisible(true);*/
 
         boton2=new JButton("Volver");
         boton2.setBounds(250,450,90,30);
@@ -51,11 +48,11 @@ public class InterfazResponder extends JFrame implements ActionListener {
         boton3.addActionListener(this);
 
     }
+
     /**
      * Funcionalidad para traducir los eventos de botones
      * @param e entrada evento
      */
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==boton1){
@@ -81,4 +78,5 @@ public class InterfazResponder extends JFrame implements ActionListener {
         }
 
     }
+
 }

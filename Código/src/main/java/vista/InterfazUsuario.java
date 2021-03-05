@@ -1,16 +1,21 @@
 package vista;
 
-import modelo.*;
-
 import javax.swing.*;
 import java.awt.event.*;
 
+/**
+ * Interfaz del usuario donde selecciona si quiere responder, hacer una pregunta, dar recompensa o aceptar una respuesta
+ * @author Jaime Carrasco
+ */
 public class InterfazUsuario extends JFrame implements ActionListener {
     private JLabel titulo;
     private JButton boton1, boton2, boton3, boton4, boton5, boton6;
     private InterfazMenu menu = new InterfazMenu();
-    private InterfazVerPreguntas preg;
+    private InterfazVerPreguntas preg,acp;
 
+    /**
+     * Constructor de la clase
+     */
     public InterfazUsuario(){
         setLayout(null);
         titulo=new JLabel("Men\u00fa Usuario");
@@ -49,7 +54,10 @@ public class InterfazUsuario extends JFrame implements ActionListener {
         boton6.addActionListener(this);
 
     }
-
+    /**
+     * Funcionalidad para traducir los eventos de botones
+     * @param e entrada evento
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==boton1){
@@ -64,7 +72,7 @@ public class InterfazUsuario extends JFrame implements ActionListener {
         }
         else if (e.getSource()==boton2){
             //interfaz de responder
-            preg=new InterfazVerPreguntas();
+            preg=new InterfazVerPreguntas(1);
             preg.setBounds(0,0,800,550);
             preg.setResizable(false);
             preg.setLocationRelativeTo(null);
@@ -75,6 +83,12 @@ public class InterfazUsuario extends JFrame implements ActionListener {
             //interfaz de dar recompensa
         }
         else if(e.getSource()==boton4){
+            acp=new InterfazVerPreguntas(0);
+            acp.setBounds(0,0,800,550);
+            acp.setResizable(false);
+            acp.setVisible(true);
+            acp.setLocationRelativeTo(null);
+            this.setVisible(false);
             //interfaz de aceptar respuesta
         }
         else if (e.getSource()==boton5){

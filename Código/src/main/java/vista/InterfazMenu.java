@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 /**
  * Clase interfaz menú
+ * @author Jaime Carrasco
  */
 public class InterfazMenu extends JFrame implements ActionListener{
     private JLabel etiqueta;
@@ -16,6 +17,9 @@ public class InterfazMenu extends JFrame implements ActionListener{
     private InterfazRegister register;
     private InterfazVerPreguntas preg;
 
+    /**
+     * constructor de la clase
+     */
     public InterfazMenu(){
         setLayout(null);
 
@@ -29,10 +33,10 @@ public class InterfazMenu extends JFrame implements ActionListener{
         add(boton2);
         boton2.addActionListener(this);
 
-        boton3 =new JButton("Ver preguntas");
+        /*boton3 =new JButton("Ver preguntas");
         boton3.setBounds(10,350,200,30);
         add(boton3);
-        boton3.addActionListener(this);
+        boton3.addActionListener(this);*/
 
         boton4 =new JButton("Salir");
         boton4.setBounds(10,350,200,30);
@@ -43,6 +47,11 @@ public class InterfazMenu extends JFrame implements ActionListener{
         etiqueta.setBounds(10, 10, 200, 300);
         add(etiqueta);
     }
+
+    /**
+     * Funcionalidad para traducir los eventos de botones
+     * @param e entrada evento
+     */
 
     public void actionPerformed(ActionEvent e){
         if(e.getSource()==boton1){
@@ -68,7 +77,7 @@ public class InterfazMenu extends JFrame implements ActionListener{
             }
 
         else if(e.getSource() == boton3) {
-            preg=new InterfazVerPreguntas();
+            preg=new InterfazVerPreguntas(1);
             preg.setBounds(0,0,800,550);
             preg.setResizable(false);
             preg.setLocationRelativeTo(null);
@@ -82,6 +91,10 @@ public class InterfazMenu extends JFrame implements ActionListener{
     }
     public static Stack stack= new Stack();
 
+    /**
+     * Main del programa
+     * @param args argumentos standard
+     */
     public static void main(String[] args) {
         //stack.imprimirPreguntas();
         InterfazMenu menu= new InterfazMenu();

@@ -7,6 +7,7 @@ import java.awt.event.*;
 
 /**
  * Clase interfaz login
+ * @author Jaime Carrasco
  */
 public class InterfazLogin extends JFrame implements ActionListener{
     private JLabel titulo, texto1, texto2, titulo2;
@@ -15,6 +16,9 @@ public class InterfazLogin extends JFrame implements ActionListener{
     private JPasswordField pass;
     public static InterfazMenu menu = new InterfazMenu();
 
+    /**
+     * constructor de la clase
+     */
     public InterfazLogin(){
         setLayout(null);
         titulo=new JLabel("Iniciar Sesi\u00f3n");
@@ -57,6 +61,11 @@ public class InterfazLogin extends JFrame implements ActionListener{
         boton3.addActionListener(this);
 
     }
+
+    /**
+     * Funcionalidad para traducir los eventos de botones
+     * @param e entrada evento
+     */
 
     @Override
     public void actionPerformed(ActionEvent e) {
